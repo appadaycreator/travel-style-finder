@@ -4,7 +4,7 @@
   "description": "好みのアクティビティ・予算・人数から最適な国内旅行先を無料診断。一人旅・カップル・家族旅行対応。",
   "start_url": "/travel-style-finder/",
   "display": "standalone",
-  "background_color": "#f8faf9",
+  "background_color": "#ffffff",
   "theme_color": "#7c3aed",
   "lang": "ja",
   "icons": [
