@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国内旅行スタイル診断 - あなたにぴったりの旅先が5問でわかる</title>
+<meta name="description" content="国内旅行スタイル診断【完全無料】5問の簡単診断で、あなたにぴったりな旅先・体験・予算別プランが見つかる。温泉・グルメ・アウトドア・一人旅・家族旅行対応。">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied','ad_user_data':'denied','ad_personalization':'denied','wait_for_update':500});</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TXQGZRF9');</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDPNYD2875"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZDPNYD2875');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8427583028015858" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+<link rel="canonical" href="https://appadaycreator.com/travel-style-finder/lp/">
+<style>
+:root{--primary:#2563EB;--accent:#F59E0B;--dark:#1e293b;--text:#374151;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:sans-serif;color:var(--dark);background:#fff;}
+a{text-decoration:none;}
+img{display:block;max-width:100%;}
+
+/* ===== HEADER ===== */
+.hdr{position:sticky;top:0;z-index:200;background:var(--primary);height:60px;display:flex;align-items:center;padding:0 1.5rem;box-shadow:0 2px 10px rgba(37,99,235,.35);}
+.hdr-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;gap:1.5rem;}
+.hdr-logo{color:#fff;font-weight:800;font-size:1.05rem;display:flex;align-items:center;gap:.4rem;flex-shrink:0;}
+.hdr-nav{flex:1;display:flex;gap:1.5rem;}
+.hdr-nav a{color:rgba(255,255,255,.88);font-size:.875rem;font-weight:500;transition:color .15s;}
+.hdr-nav a:hover{color:#fff;}
+.hdr-cta{background:var(--accent);color:#fff;padding:.45rem 1.25rem;border-radius:999px;font-size:.875rem;font-weight:700;white-space:nowrap;transition:background .15s,transform .15s;flex-shrink:0;}
+.hdr-cta:hover{background:#D97706;transform:translateY(-1px);}
+@media(max-width:768px){.hdr-nav{display:none;}.hdr-cta{font-size:.8rem;padding:.4rem .9rem;}}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:580px;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;background:url('../assets/photos/photo_01.jpg') center/cover no-repeat;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(110deg,rgba(5,15,55,.82) 0%,rgba(10,40,110,.6) 55%,rgba(0,0,0,.25) 100%);}
+.hero-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;padding:3.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;}
+.hero-badges{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.25rem;}
+.hero-badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:.3rem .9rem;border-radius:999px;font-size:.78rem;font-weight:600;}
+.hero h1{color:#fff;font-size:clamp(1.7rem,3.8vw,2.7rem);font-weight:800;line-height:1.25;margin-bottom:1rem;}
+.hero h1 span{color:#FCD34D;}
+.hero-sub{color:rgba(255,255,255,.88);font-size:.98rem;line-height:1.75;margin-bottom:1.75rem;}
+.hero-btns{display:flex;gap:.875rem;flex-wrap:wrap;}
+.btn-primary{background:var(--accent);color:#fff;padding:.875rem 2rem;border-radius:999px;font-size:1rem;font-weight:700;display:inline-flex;align-items:center;gap:.4rem;transition:all .2s;box-shadow:0 4px 16px rgba(245,158,11,.4);}
+.btn-primary:hover{background:#D97706;transform:translateY(-2px);box-shadow:0 6px 22px rgba(245,158,11,.5);}
+.btn-outline{background:transparent;color:#fff;padding:.875rem 2rem;border-radius:999px;font-size:1rem;font-weight:700;border:2px solid rgba(255,255,255,.6);display:inline-flex;align-items:center;gap:.4rem;transition:all .2s;}
+.btn-outline:hover{background:rgba(255,255,255,.12);border-color:#fff;}
+.hero-photos{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.hero-photo{border-radius:14px;overflow:hidden;aspect-ratio:4/3;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;}
+.hero-trust{margin-top:1.5rem;padding:1rem 1.25rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;display:flex;gap:1.5rem;flex-wrap:wrap;}
+.hero-stat strong{display:block;font-size:1.3rem;font-weight:800;color:#FCD34D;}
+.hero-stat span{font-size:.75rem;color:rgba(255,255,255,.8);}
+@media(max-width:768px){.hero-inner{grid-template-columns:1fr;gap:0;padding:2.5rem 1.25rem;}.hero-visual{display:none;}.hero{min-height:420px;}}
+
+/* ===== BADGES STRIP ===== */
+.badges-strip{background:#fff;border-bottom:1px solid #e5e7eb;padding:1.25rem 1.5rem;}
+.badges-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;}
+.badge-item{display:flex;align-items:center;gap:.75rem;}
+.badge-icon{width:48px;height:48px;background:#EFF6FF;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.35rem;flex-shrink:0;}
+.badge-text strong{display:block;font-size:.92rem;font-weight:700;color:var(--dark);}
+.badge-text span{font-size:.75rem;color:#6b7280;}
+
+/* ===== SECTIONS ===== */
+.sec{padding:4rem 1.5rem;}
+.sec-inner{max-width:1200px;margin:0 auto;}
+.sec-label{display:inline-block;background:#EFF6FF;color:var(--primary);padding:.25rem .9rem;border-radius:999px;font-size:.78rem;font-weight:700;margin-bottom:.75rem;}
+.sec-title{font-size:clamp(1.35rem,3vw,1.9rem);font-weight:800;color:var(--dark);text-align:center;margin-bottom:.6rem;}
+.sec-sub{text-align:center;color:#6b7280;font-size:.9rem;margin-bottom:2.5rem;}
+.sec-alt{background:#F0F7FF;}
+.sec-gray{background:#F8FAFC;}
+
+/* ===== FEATURE CARDS ===== */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+@media(max-width:768px){.feat-grid{grid-template-columns:1fr;}}
+.feat-card{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.12);}
+.feat-img{aspect-ratio:16/10;overflow:hidden;}
+.feat-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
+.feat-card:hover .feat-img img{transform:scale(1.05);}
+.feat-body{padding:1.25rem;}
+.feat-tag{display:inline-block;background:#EFF6FF;color:var(--primary);padding:.18rem .7rem;border-radius:999px;font-size:.73rem;font-weight:700;margin-bottom:.6rem;}
+.feat-title{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:.4rem;}
+.feat-desc{font-size:.85rem;color:#6b7280;line-height:1.65;}
+
+/* ===== PERSONALITY ===== */
+.pers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;}
+@media(max-width:768px){.pers-grid{grid-template-columns:1fr;gap:1.25rem;}}
+.pers-card{background:#fff;border-radius:16px;padding:1.5rem;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.donut-wrap{position:relative;width:120px;height:120px;margin:0 auto 1rem;}
+.donut-svg{transform:rotate(-90deg);}
+.donut-track{fill:none;stroke:#e5e7eb;stroke-width:12;}
+.donut-fill{fill:none;stroke-width:12;stroke-linecap:round;}
+.donut-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.donut-pct{font-size:1.5rem;font-weight:800;color:var(--dark);}
+.donut-unit{font-size:.68rem;color:#6b7280;margin-top:-2px;}
+.pers-name{font-size:.98rem;font-weight:700;color:var(--dark);margin-bottom:.4rem;}
+.pers-type-tag{display:inline-block;padding:.2rem .75rem;border-radius:999px;font-size:.73rem;font-weight:700;margin-bottom:.6rem;}
+.pers-desc{font-size:.82rem;color:#6b7280;line-height:1.65;}
+
+/* ===== TRAVEL TYPES ===== */
+.types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+@media(max-width:768px){.types-grid{grid-template-columns:repeat(2,1fr);gap:.75rem;}}
+.type-card{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer;}
+.type-card img{width:100%;height:100%;object-fit:cover;transition:transform .35s;}
+.type-card:hover img{transform:scale(1.06);}
+.type-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.68) 0%,transparent 55%);}
+.type-content{position:absolute;bottom:0;left:0;right:0;padding:.875rem 1rem;}
+.type-tag{font-size:.7rem;color:rgba(255,255,255,.82);display:block;margin-bottom:.2rem;}
+.type-name{font-size:.95rem;font-weight:700;color:#fff;}
+.type-match{font-size:.73rem;color:#FCD34D;font-weight:600;margin-top:.15rem;}
+
+/* ===== SAMPLE RESULTS ===== */
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;}
+@media(max-width:768px){.results-grid{grid-template-columns:1fr;}}
+.result-item{background:#fff;border-radius:12px;overflow:hidden;display:flex;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:1rem;transition:transform .2s;}
+.result-item:hover{transform:translateX(4px);}
+.result-item:first-child{border:2px solid #FCD34D;}
+.result-thumb{width:100px;flex-shrink:0;}
+.result-thumb img{width:100%;height:100%;object-fit:cover;}
+.result-body{padding:.875rem;flex:1;}
+.result-rank{font-size:.73rem;color:#6b7280;margin-bottom:.2rem;}
+.result-name{font-size:.92rem;font-weight:700;color:var(--dark);margin-bottom:.45rem;}
+.match-bar{background:#e5e7eb;border-radius:999px;height:6px;overflow:hidden;}
+.match-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--primary),#60a5fa);}
+.match-label{font-size:.73rem;color:var(--primary);font-weight:700;margin-top:.2rem;}
+.chart-box{background:#fff;border-radius:16px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.chart-box h3{font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:1.25rem;}
+
+/* ===== STEPS ===== */
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;}
+@media(max-width:768px){.steps-grid{grid-template-columns:1fr;}}
+.step-card{text-align:center;}
+.step-num{width:48px;height:48px;background:var(--primary);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:800;margin:0 auto 1rem;position:relative;z-index:1;}
+.step-img{border-radius:14px;overflow:hidden;aspect-ratio:16/10;margin-bottom:1rem;}
+.step-img img{width:100%;height:100%;object-fit:cover;}
+.step-title{font-size:.98rem;font-weight:700;color:var(--dark);margin-bottom:.4rem;}
+.step-desc{font-size:.83rem;color:#6b7280;line-height:1.65;}
+
+/* ===== USE CASES ===== */
+.uc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+@media(max-width:1024px){.uc-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.uc-grid{grid-template-columns:1fr;}}
+.uc-card{border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.07);transition:all .2s;}
+.uc-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.1);}
+.uc-img{aspect-ratio:16/10;overflow:hidden;}
+.uc-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
+.uc-card:hover .uc-img img{transform:scale(1.05);}
+.uc-body{padding:1rem;}
+.uc-icon{font-size:1.4rem;margin-bottom:.4rem;}
+.uc-title{font-size:.88rem;font-weight:700;color:var(--dark);margin-bottom:.3rem;}
+.uc-desc{font-size:.78rem;color:#6b7280;line-height:1.6;}
+
+/* ===== FAQ ===== */
+.faq-list{max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:.75rem;}
+.faq-item{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e5e7eb;}
+.faq-q{padding:1rem 1.25rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-weight:600;color:var(--dark);font-size:.875rem;list-style:none;}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-arrow{color:#9ca3af;font-size:.75rem;flex-shrink:0;transition:transform .2s;}
+details[open] .faq-arrow{transform:rotate(180deg);}
+.faq-a{padding:.875rem 1.25rem 1rem;font-size:.85rem;color:#6b7280;line-height:1.75;border-top:1px solid #f1f5f9;}
+
+/* ===== FOOTER CTA ===== */
+.footer-cta{position:relative;overflow:hidden;background:var(--primary);padding:4.5rem 2rem;text-align:center;}
+.footer-cta-bg{position:absolute;inset:0;background:url('../assets/photos/photo_06.jpg') center/cover no-repeat;opacity:.18;}
+.footer-cta-in{position:relative;z-index:1;}
+.footer-cta-in p.eyebrow{color:rgba(255,255,255,.8);font-size:.88rem;margin-bottom:.75rem;}
+.footer-cta-in h2{color:#fff;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;margin-bottom:1rem;line-height:1.3;}
+.footer-cta-in p.sub{color:rgba(255,255,255,.82);font-size:.95rem;margin-bottom:2rem;}
+.footer-cta-in .stats{color:rgba(255,255,255,.6);font-size:.78rem;margin-top:1.5rem;}
+
+/* ===== SITE FOOTER ===== */
+.site-foot{background:#1e293b;padding:2rem 1.5rem;}
+.foot-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:space-between;align-items:center;}
+.foot-brand{color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;gap:.4rem;}
+.foot-links{display:flex;gap:1.25rem;flex-wrap:wrap;}
+.foot-links a{color:#94a3b8;font-size:.78rem;}
+.foot-links a:hover{color:#fff;}
+.foot-copy{color:#475569;font-size:.75rem;}
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <a href="../" class="hdr-logo">✈️ 旅行スタイル診断</a>
+    <nav class="hdr-nav">
+      <a href="#types">旅のタイプ</a>
+      <a href="#how-to">使い方</a>
+      <a href="#features">診断情報</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="../" class="hdr-cta">今すぐ診断する →</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badges">
+        <span class="hero-badge">✓ 完全無料</span>
+        <span class="hero-badge">⏱ 約1分</span>
+        <span class="hero-badge">📱 スマホ対応</span>
+      </div>
+      <h1>あなたにぴったりの<br>国内旅行先、<span>5問で発見。</span></h1>
+      <p class="hero-sub">旅行スタイル・予算・同行者・季節から、<br>あなただけのおすすめ旅行先3選を提案します。<br>登録不要・完全無料でいますぐ試せます。</p>
+      <div class="hero-btns">
+        <a href="../" class="btn-primary">✈️ 今すぐ診断する</a>
+        <a href="#how-to" class="btn-outline">利用方法を見る</a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-stat"><strong>15,240+</strong><span>診断完了</span></div>
+        <div class="hero-stat"><strong>4.8/5.0 ⭐</strong><span>平均満足度</span></div>
+        <div class="hero-stat"><strong>92%</strong><span>旅行実現率</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photos">
+        <div class="hero-photo"><img src="../assets/photos/photo_02.jpg" alt="温泉旅行" loading="eager"></div>
+        <div class="hero-photo"><img src="../assets/photos/photo_03.jpg" alt="グルメ旅行" loading="eager"></div>
+        <div class="hero-photo"><img src="../assets/photos/photo_04.jpg" alt="アウトドア旅行" loading="eager"></div>
+        <div class="hero-photo"><img src="../assets/photos/photo_05.jpg" alt="文化歴史旅行" loading="eager"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BADGES STRIP -->
+<div class="badges-strip">
+  <div class="badges-inner">
+    <div class="badge-item">
+      <div class="badge-icon">💰</div>
+      <div class="badge-text"><strong>完全無料</strong><span>登録・クレカ不要</span></div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-icon">📋</div>
+      <div class="badge-text"><strong>5問で完了</strong><span>約1分で診断完了</span></div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-icon">🗾</div>
+      <div class="badge-text"><strong>国内旅行先 3つ提案</strong><span>あなたの好みに合わせて</span></div>
+    </div>
+    <div class="badge-item">
+      <div class="badge-icon">⭐</div>
+      <div class="badge-text"><strong>満足度 4.8/5.0</strong><span>15,240件の診断実績</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="sec" id="features">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:.5rem;"><span class="sec-label">特徴</span></div>
+    <h2 class="sec-title">旅行スタイル診断でできること</h2>
+    <p class="sec-sub">5つの質問に答えるだけで、あなたにぴったりの旅先が見つかります</p>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-img"><img src="../assets/photos/photo_02.jpg" alt="15種類の旅行スタイル" loading="lazy"></div>
+        <div class="feat-body">
+          <span class="feat-tag">旅のタイプ</span>
+          <h3 class="feat-title">温泉・グルメ・アウトドアなど15種類に対応</h3>
+          <p class="feat-desc">一人旅・カップル・家族旅行・友人グループまで、どんな旅スタイルにも対応。あなたの性格から旅行タイプを分析します。</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-img"><img src="../assets/photos/photo_03.jpg" alt="予算別プラン提案" loading="lazy"></div>
+        <div class="feat-body">
+          <span class="feat-tag">予算対応</span>
+          <h3 class="feat-title">予算・人数・季節別に最適プランを提案</h3>
+          <p class="feat-desc">1万円〜10万円以上まで幅広い予算に対応。季節・同行者によって変わる最適な旅先をスコアリングして提案します。</p>
+        </div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-img"><img src="../assets/photos/photo_04.jpg" alt="宿泊プラン比較" loading="lazy"></div>
+        <div class="feat-body">
+          <span class="feat-tag">予約連携</span>
+          <h3 class="feat-title">楽天トラベル・じゃらんで宿泊プランを即検索</h3>
+          <p class="feat-desc">診断結果からそのまま宿泊予約サイトへ移動。一休.com・Yahoo!トラベルなど複数サイトで比較・予約できます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERSONALITY -->
+<section class="sec sec-alt">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:.5rem;"><span class="sec-label">性格分析</span></div>
+    <h2 class="sec-title">性格からわかる、あなたの旅スタイル</h2>
+    <p class="sec-sub">あなたの回答パターンから旅行性格タイプを診断します</p>
+    <div class="pers-grid">
+      <div class="pers-card">
+        <div class="donut-wrap">
+          <svg class="donut-svg" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="donut-track" cx="60" cy="60" r="48"></circle>
+            <circle class="donut-fill" cx="60" cy="60" r="48" stroke="#2563EB" stroke-dasharray="206 302"></circle>
+          </svg>
+          <div class="donut-label"><span class="donut-pct">68%</span><span class="donut-unit">一致率</span></div>
+        </div>
+        <div class="pers-name">のんびりリラックス派</div>
+        <span class="pers-type-tag" style="background:#EFF6FF;color:#2563EB;">♨️ 温泉 / 癒し</span>
+        <p class="pers-desc">人混みを避け、ゆったりとした時間を大切にするタイプ。温泉・旅館・自然の景色との相性が抜群です。</p>
+      </div>
+      <div class="pers-card">
+        <div class="donut-wrap">
+          <svg class="donut-svg" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="donut-track" cx="60" cy="60" r="48"></circle>
+            <circle class="donut-fill" cx="60" cy="60" r="48" stroke="#F59E0B" stroke-dasharray="151 302"></circle>
+          </svg>
+          <div class="donut-label"><span class="donut-pct">50%</span><span class="donut-unit">一致率</span></div>
+        </div>
+        <div class="pers-name">アクティブ・体験派</div>
+        <span class="pers-type-tag" style="background:#FEF3C7;color:#B45309;">🏔️ アウトドア / 冒険</span>
+        <p class="pers-desc">体を動かすことが好きで、珍しい体験に積極的なタイプ。トレッキング・マリンスポーツ・スキーが向いています。</p>
+      </div>
+      <div class="pers-card">
+        <div class="donut-wrap">
+          <svg class="donut-svg" width="120" height="120" viewBox="0 0 120 120">
+            <circle class="donut-track" cx="60" cy="60" r="48"></circle>
+            <circle class="donut-fill" cx="60" cy="60" r="48" stroke="#10B981" stroke-dasharray="166 302"></circle>
+          </svg>
+          <div class="donut-label"><span class="donut-pct">55%</span><span class="donut-unit">一致率</span></div>
+        </div>
+        <div class="pers-name">グルメ・食文化派</div>
+        <span class="pers-type-tag" style="background:#ECFDF5;color:#059669;">🍱 グルメ / 食体験</span>
+        <p class="pers-desc">旅の主目的が食べること。現地グルメ・市場・老舗店探索が生きがい。大阪・福岡・金沢との相性が◎。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVEL TYPES -->
+<section class="sec" id="types">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:.5rem;"><span class="sec-label">旅タイプ別</span></div>
+    <h2 class="sec-title">あなたはどのタイプ？</h2>
+    <p class="sec-sub">6つの旅スタイルから、あなたにぴったりのタイプを見つけよう</p>
+    <div class="types-grid">
+      <div class="type-card">
+        <img src="../assets/photos/photo_07.jpg" alt="温泉リラックス">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">♨️ 温泉・癒し</span><div class="type-name">のんびり温泉派</div><div class="type-match">マッチ率 68%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_08.jpg" alt="グルメ旅行">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">🍱 グルメ・食文化</span><div class="type-name">食い倒れグルメ派</div><div class="type-match">マッチ率 55%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_09.jpg" alt="アウトドア旅行">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">🏔️ アウトドア</span><div class="type-name">アクティブ冒険派</div><div class="type-match">マッチ率 50%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_10.jpg" alt="文化歴史旅行">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">⛩️ 文化・歴史</span><div class="type-name">歴史・文化探求派</div><div class="type-match">マッチ率 45%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_11.jpg" alt="マリンスポーツ旅行">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">🤿 マリン・海</span><div class="type-name">海リゾート派</div><div class="type-match">マッチ率 42%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_12.jpg" alt="冬・スキー旅行">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">⛷️ 冬・スキー</span><div class="type-name">ウィンタースポーツ派</div><div class="type-match">マッチ率 38%</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAMPLE RESULTS -->
+<section class="sec sec-gray">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:.5rem;"><span class="sec-label">診断結果イメージ</span></div>
+    <h2 class="sec-title">こんな結果が届きます</h2>
+    <p class="sec-sub">「のんびりリラックス派・カップル・予算3〜5万円・春の旅」の診断例</p>
+    <div class="results-grid">
+      <div>
+        <h3 style="font-size:.95rem;font-weight:700;color:var(--dark);margin-bottom:1rem;">⭐ あなたへのおすすめ旅行先</h3>
+        <div class="result-item">
+          <div class="result-thumb"><img src="../assets/photos/photo_17.jpg" alt="京都"></div>
+          <div class="result-body">
+            <div class="result-rank">🥇 第1位</div>
+            <div class="result-name">京都（歴史・伝統文化）</div>
+            <div class="match-bar"><div class="match-fill" style="width:92%"></div></div>
+            <div class="match-label">マッチ度 92%</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-thumb"><img src="../assets/photos/photo_18.jpg" alt="草津温泉"></div>
+          <div class="result-body">
+            <div class="result-rank">🥈 第2位</div>
+            <div class="result-name">草津温泉（温泉・湯治）</div>
+            <div class="match-bar"><div class="match-fill" style="width:85%"></div></div>
+            <div class="match-label">マッチ度 85%</div>
+          </div>
+        </div>
+        <div class="result-item">
+          <div class="result-thumb"><img src="../assets/photos/photo_19.jpg" alt="伊豆"></div>
+          <div class="result-body">
+            <div class="result-rank">🥉 第3位</div>
+            <div class="result-name">伊豆（温泉・海鮮）</div>
+            <div class="match-bar"><div class="match-fill" style="width:78%"></div></div>
+            <div class="match-label">マッチ度 78%</div>
+          </div>
+        </div>
+        <a href="../" class="btn-primary" style="font-size:.88rem;padding:.75rem 1.75rem;margin-top:1.5rem;display:inline-flex;">✈️ 今すぐ診断する</a>
+      </div>
+      <div class="chart-box">
+        <h3>📊 マッチ度の比較チャート</h3>
+        <canvas id="sample-chart" height="260"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="sec" id="how-to">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:.5rem;"><span class="sec-label">使い方</span></div>
+    <h2 class="sec-title">使い方はとても簡単！</h2>
+    <p class="sec-sub">3ステップで、あなたの旅行先が決まります</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-img"><img src="../assets/photos/photo_13.jpg" alt="診断開始" loading="lazy"></div>
+        <div class="step-title">「今すぐ診断する」をタップ</div>
+        <p class="step-desc">ページ上部のボタンから診断スタート。登録不要・完全無料でご利用いただけます。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-img"><img src="../assets/photos/photo_14.jpg" alt="5問に答える" loading="lazy"></div>
+        <div class="step-title">5問の質問に答える</div>
+        <p class="step-desc">旅行スタイル・同行者・予算・季節・距離の5問。選択肢をタップするだけで約1分で完了。</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-img"><img src="../assets/photos/photo_15.jpg" alt="結果を確認" loading="lazy"></div>
+        <div class="step-title">おすすめ旅行先 TOP3を確認</div>
+        <p class="step-desc">あなたにぴったりの旅行先が3ヵ所提案されます。宿泊プランもその場で検索・比較できます。</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="../" class="btn-primary" style="font-size:1rem;padding:.9rem 2.25rem;">✈️ 今すぐ無料で診断する →</a>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="sec sec-gray">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:.5rem;"><span class="sec-label">こんな時におすすめ</span></div>
+    <h2 class="sec-title">どんな旅行シーンでも活躍</h2>
+    <p class="sec-sub">ひとり旅から家族旅行まで、あらゆる旅のシーンに対応</p>
+    <div class="uc-grid">
+      <div class="uc-card">
+        <div class="uc-img"><img src="../assets/photos/photo_16.jpg" alt="一人旅" loading="lazy"></div>
+        <div class="uc-body"><div class="uc-icon">🌏</div><div class="uc-title">一人旅デビュー</div><p class="uc-desc">初めての一人旅でも安心。自分のペースで楽しめる旅先を提案します。</p></div>
+      </div>
+      <div class="uc-card">
+        <div class="uc-img"><img src="../assets/photos/photo_20.jpg" alt="カップル旅行" loading="lazy"></div>
+        <div class="uc-body"><div class="uc-icon">💑</div><div class="uc-title">カップル・記念日旅行</div><p class="uc-desc">二人の好みに合った特別な旅先を提案。記念日に最適な宿も探せます。</p></div>
+      </div>
+      <div class="uc-card">
+        <div class="uc-img"><img src="../assets/photos/photo_21.jpg" alt="家族旅行" loading="lazy"></div>
+        <div class="uc-body"><div class="uc-icon">👨‍👩‍👧‍👦</div><div class="uc-title">子連れ家族旅行</div><p class="uc-desc">子どもが楽しめる旅先を優先提案。移動距離・予算を考慮した現実的なプランに。</p></div>
+      </div>
+      <div class="uc-card">
+        <div class="uc-img"><img src="../assets/photos/photo_22.jpg" alt="グループ旅行" loading="lazy"></div>
+        <div class="uc-body"><div class="uc-icon">👫</div><div class="uc-title">友人グループ旅行</div><p class="uc-desc">大人数でも満足できる旅先を提案。グルメ・観光・アクティビティが揃う場所へ。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-alt" id="faq">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:.5rem;"><span class="sec-label">FAQ</span></div>
+    <h2 class="sec-title">よくある質問</h2>
+    <p class="sec-sub">ご不明な点はこちらをご確認ください</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-q">何問答えますか？所要時間は？<span class="faq-arrow">▼</span></summary>
+        <p class="faq-a">5問のみです。旅行スタイル・同行者・予算・季節・移動距離の選択肢から選ぶだけで、約1分で診断が完了します。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">完全無料ですか？会員登録は必要？<span class="faq-arrow">▼</span></summary>
+        <p class="faq-a">完全無料です。会員登録・メールアドレス・クレジットカードの入力は一切不要です。今すぐお試しいただけます。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">何度でも診断できますか？<span class="faq-arrow">▼</span></summary>
+        <p class="faq-a">はい、何度でも診断できます。同行者や予算、季節を変えて複数回診断することで、さまざまなパターンの旅行先を比較検討できます。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">個人情報は保護されますか？<span class="faq-arrow">▼</span></summary>
+        <p class="faq-a">はい。入力いただいた情報はお使いのブラウザ内のみで処理され、外部サーバーに送信されることはありません。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">提案された旅行先の宿泊プランはどこで見られますか？<span class="faq-arrow">▼</span></summary>
+        <p class="faq-a">診断結果画面から一休.com・じゃらん・Yahoo!トラベルなどの宿泊予約サイトへ直接移動できます。各サイトで料金比較・予約が可能です。</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">スマートフォンでも使えますか？<span class="faq-arrow">▼</span></summary>
+        <p class="faq-a">はい。スマートフォン・タブレット・PC、すべてのデバイスに対応しています。レスポンシブデザインで快適にご利用いただけます。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="footer-cta-bg"></div>
+  <div class="footer-cta-in">
+    <p class="eyebrow">✈️ 無料で今すぐ始められます</p>
+    <h2>あなたに合う国内旅行先を、<br>今すぐ発見しよう</h2>
+    <p class="sub">5問に答えるだけ。登録不要・完全無料で、あなたにぴったりの旅先が見つかります。</p>
+    <a href="../" class="btn-primary" style="font-size:1.05rem;padding:.975rem 2.5rem;display:inline-flex;">✈️ 今すぐ診断する →</a>
+    <p class="stats">診断完了 15,240件 ・ 満足度 4.8/5.0 ・ 旅行実現率 92%</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="foot-inner">
+    <a href="../" class="foot-brand">✈️ 旅行スタイル診断</a>
+    <div class="foot-links">
+      <a href="../privacy-policy.html">プライバシーポリシー</a>
+      <a href="../contact.html">お問い合わせ</a>
+      <a href="https://appadaycreator.com/">AppADayCreator</a>
+    </div>
+    <div class="foot-copy">© 2026 AppADayCreator / Tech&amp;Brace</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ctx = document.getElementById('sample-chart');
+  if(!ctx) return;
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['温泉・癒し','グルメ','アクティブ','歴史・文化','自然景観','予算適合'],
+      datasets: [
+        {label:'京都',data:[70,75,50,95,70,80],backgroundColor:'rgba(37,99,235,.12)',borderColor:'#2563EB',borderWidth:2,pointBackgroundColor:'#2563EB',pointRadius:3},
+        {label:'草津温泉',data:[95,55,40,55,80,75],backgroundColor:'rgba(245,158,11,.12)',borderColor:'#F59E0B',borderWidth:2,pointBackgroundColor:'#F59E0B',pointRadius:3},
+        {label:'伊豆',data:[85,70,60,50,85,70],backgroundColor:'rgba(16,185,129,.1)',borderColor:'#10B981',borderWidth:2,pointBackgroundColor:'#10B981',pointRadius:3}
+      ]
+    },
+    options:{
+      responsive:true,
+      plugins:{legend:{position:'bottom',labels:{font:{size:11},padding:12}}},
+      scales:{r:{beginAtZero:true,max:100,ticks:{stepSize:25,font:{size:9}},pointLabels:{font:{size:11}}}}
+    }
+  });
+})();
+</script>
+</body>
+</html>
