@@ -20,15 +20,35 @@ a{text-decoration:none;}
 img{display:block;max-width:100%;}
 
 /* ===== HEADER ===== */
-.hdr{position:sticky;top:0;z-index:200;background:var(--primary);height:60px;display:flex;align-items:center;padding:0 1.5rem;box-shadow:0 2px 10px rgba(37,99,235,.35);}
+.hdr{position:sticky;top:0;z-index:200;background:#fff;height:60px;display:flex;align-items:center;padding:0 1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.08);border-bottom:1px solid #e5e7eb;}
 .hdr-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;gap:1.5rem;}
-.hdr-logo{color:#fff;font-weight:800;font-size:1.05rem;display:flex;align-items:center;gap:.4rem;flex-shrink:0;}
+.hdr-logo{color:var(--primary);font-weight:800;font-size:1.05rem;display:flex;align-items:center;gap:.4rem;flex-shrink:0;}
 .hdr-nav{flex:1;display:flex;gap:1.5rem;}
-.hdr-nav a{color:rgba(255,255,255,.88);font-size:.875rem;font-weight:500;transition:color .15s;}
-.hdr-nav a:hover{color:#fff;}
+.hdr-nav a{color:#4B5563;font-size:.875rem;font-weight:500;transition:color .15s;}
+.hdr-nav a:hover{color:var(--primary);}
 .hdr-cta{background:var(--accent);color:#fff;padding:.45rem 1.25rem;border-radius:999px;font-size:.875rem;font-weight:700;white-space:nowrap;transition:background .15s,transform .15s;flex-shrink:0;}
 .hdr-cta:hover{background:#D97706;transform:translateY(-1px);}
 @media(max-width:768px){.hdr-nav{display:none;}.hdr-cta{font-size:.8rem;padding:.4rem .9rem;}}
+
+/* ===== PHONE MOCKUP ===== */
+.phone-mockup{position:relative;display:inline-flex;align-items:flex-start;justify-content:center;width:100%;}
+.phone-frame{width:230px;height:450px;background:#1e293b;border-radius:32px;padding:10px;box-shadow:0 20px 60px rgba(0,0,0,.55),0 0 0 2px rgba(255,255,255,.12),inset 0 0 0 1px #475569;position:relative;flex-shrink:0;}
+.phone-screen{width:100%;height:100%;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#f8fafc;}
+.phone-screen-img{height:52%;overflow:hidden;flex-shrink:0;}
+.phone-screen-img img{width:100%;height:100%;object-fit:cover;}
+.phone-screen-ui{flex:1;padding:.6rem .7rem;background:#fff;display:flex;flex-direction:column;gap:.35rem;}
+.ps-head{font-size:.6rem;font-weight:700;color:var(--primary);background:#EFF6FF;display:inline-block;padding:.12rem .45rem;border-radius:999px;margin-bottom:.1rem;}
+.ps-title{font-size:.68rem;font-weight:700;color:#1e293b;}
+.ps-row{display:flex;align-items:center;gap:.35rem;font-size:.58rem;color:#374151;}
+.ps-row-label{flex-shrink:0;min-width:52px;}
+.ps-bar{flex:1;height:5px;background:#e5e7eb;border-radius:999px;overflow:hidden;}
+.ps-bar-fill{height:100%;border-radius:999px;}
+.ps-pct{font-size:.6rem;font-weight:700;flex-shrink:0;min-width:24px;text-align:right;}
+.ps-tag-result{margin-top:.2rem;background:#EFF6FF;border-radius:6px;padding:.3rem .45rem;font-size:.58rem;color:var(--primary);font-weight:600;}
+.phone-notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:60px;height:14px;background:#1e293b;border-radius:0 0 8px 8px;z-index:5;}
+.phone-float{position:absolute;right:-30px;top:60px;background:#fff;border-radius:12px;padding:.55rem .85rem;box-shadow:0 6px 20px rgba(0,0,0,.16);font-size:.7rem;white-space:nowrap;border:1px solid #e5e7eb;}
+.phone-float strong{display:block;color:#10B981;font-size:.82rem;font-weight:800;}
+.phone-float span{color:#6b7280;font-size:.63rem;}
 
 /* ===== HERO ===== */
 .hero{position:relative;min-height:580px;display:flex;align-items:center;overflow:hidden;}
@@ -83,6 +103,13 @@ img{display:block;max-width:100%;}
 .feat-title{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:.4rem;}
 .feat-desc{font-size:.85rem;color:#6b7280;line-height:1.65;}
 
+/* ===== FEAT ICON CARD ===== */
+.feat-icon-card{border-radius:16px;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.08);padding:2.25rem 1.5rem;text-align:center;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;align-items:center;}
+.feat-icon-card:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(0,0,0,.12);}
+.feat-icon-wrap{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1.25rem;flex-shrink:0;}
+.feat-icon-card .feat-title{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:.6rem;}
+.feat-icon-card .feat-desc{font-size:.85rem;color:#6b7280;line-height:1.7;}
+
 /* ===== PERSONALITY ===== */
 .pers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;}
 @media(max-width:768px){.pers-grid{grid-template-columns:1fr;gap:1.25rem;}}
@@ -99,7 +126,8 @@ img{display:block;max-width:100%;}
 .pers-desc{font-size:.82rem;color:#6b7280;line-height:1.65;}
 
 /* ===== TRAVEL TYPES ===== */
-.types-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.types-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;}
+@media(max-width:1024px){.types-grid{grid-template-columns:repeat(3,1fr);gap:1rem;}}
 @media(max-width:768px){.types-grid{grid-template-columns:repeat(2,1fr);gap:.75rem;}}
 .type-card{border-radius:14px;overflow:hidden;position:relative;aspect-ratio:4/3;cursor:pointer;}
 .type-card img{width:100%;height:100%;object-fit:cover;transition:transform .35s;}
@@ -220,11 +248,39 @@ details[open] .faq-arrow{transform:rotate(180deg);}
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-photos">
-        <div class="hero-photo"><img src="../assets/photos/photo_02.jpg" alt="温泉旅行" loading="eager"></div>
-        <div class="hero-photo"><img src="../assets/photos/photo_03.jpg" alt="グルメ旅行" loading="eager"></div>
-        <div class="hero-photo"><img src="../assets/photos/photo_04.jpg" alt="アウトドア旅行" loading="eager"></div>
-        <div class="hero-photo"><img src="../assets/photos/photo_05.jpg" alt="文化歴史旅行" loading="eager"></div>
+      <div class="phone-mockup">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-screen-img">
+              <img src="../assets/photos/photo_03.jpg" alt="旅行スタイル診断 診断画面" loading="eager">
+            </div>
+            <div class="phone-screen-ui">
+              <span class="ps-head">✈️ 旅行スタイル診断 結果</span>
+              <div class="ps-title">あなたへのおすすめ旅行先 TOP3</div>
+              <div class="ps-row">
+                <span class="ps-row-label">🥇 京都</span>
+                <div class="ps-bar"><div class="ps-bar-fill" style="width:92%;background:#2563EB;"></div></div>
+                <span class="ps-pct" style="color:#2563EB;">92%</span>
+              </div>
+              <div class="ps-row">
+                <span class="ps-row-label">🥈 草津温泉</span>
+                <div class="ps-bar"><div class="ps-bar-fill" style="width:85%;background:#F59E0B;"></div></div>
+                <span class="ps-pct" style="color:#F59E0B;">85%</span>
+              </div>
+              <div class="ps-row">
+                <span class="ps-row-label">🥉 伊豆</span>
+                <div class="ps-bar"><div class="ps-bar-fill" style="width:78%;background:#10B981;"></div></div>
+                <span class="ps-pct" style="color:#10B981;">78%</span>
+              </div>
+              <div class="ps-tag-result">📊 のんびり温泉派 マッチ度 68%</div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-float">
+          <strong>✅ 15,240件</strong>
+          <span>診断完了</span>
+        </div>
       </div>
     </div>
   </div>
@@ -259,29 +315,23 @@ details[open] .faq-arrow{transform:rotate(180deg);}
     <h2 class="sec-title">旅行スタイル診断でできること</h2>
     <p class="sec-sub">5つの質問に答えるだけで、あなたにぴったりの旅先が見つかります</p>
     <div class="feat-grid">
-      <div class="feat-card">
-        <div class="feat-img"><img src="../assets/photos/photo_02.jpg" alt="15種類の旅行スタイル" loading="lazy"></div>
-        <div class="feat-body">
-          <span class="feat-tag">旅のタイプ</span>
-          <h3 class="feat-title">温泉・グルメ・アウトドアなど15種類に対応</h3>
-          <p class="feat-desc">一人旅・カップル・家族旅行・友人グループまで、どんな旅スタイルにも対応。あなたの性格から旅行タイプを分析します。</p>
-        </div>
+      <div class="feat-icon-card">
+        <div class="feat-icon-wrap" style="background:#EFF6FF;">🗾</div>
+        <span class="feat-tag">旅のタイプ</span>
+        <h3 class="feat-title">温泉・グルメ・アウトドアなど15種類に対応</h3>
+        <p class="feat-desc">一人旅・カップル・家族旅行・友人グループまで、どんな旅スタイルにも対応。あなたの性格から旅行タイプを分析します。</p>
       </div>
-      <div class="feat-card">
-        <div class="feat-img"><img src="../assets/photos/photo_03.jpg" alt="予算別プラン提案" loading="lazy"></div>
-        <div class="feat-body">
-          <span class="feat-tag">予算対応</span>
-          <h3 class="feat-title">予算・人数・季節別に最適プランを提案</h3>
-          <p class="feat-desc">1万円〜10万円以上まで幅広い予算に対応。季節・同行者によって変わる最適な旅先をスコアリングして提案します。</p>
-        </div>
+      <div class="feat-icon-card">
+        <div class="feat-icon-wrap" style="background:#FEF3C7;">💰</div>
+        <span class="feat-tag">予算対応</span>
+        <h3 class="feat-title">予算・人数・季節別に最適プランを提案</h3>
+        <p class="feat-desc">1万円〜10万円以上まで幅広い予算に対応。季節・同行者によって変わる最適な旅先をスコアリングして提案します。</p>
       </div>
-      <div class="feat-card">
-        <div class="feat-img"><img src="../assets/photos/photo_04.jpg" alt="宿泊プラン比較" loading="lazy"></div>
-        <div class="feat-body">
-          <span class="feat-tag">予約連携</span>
-          <h3 class="feat-title">楽天トラベル・じゃらんで宿泊プランを即検索</h3>
-          <p class="feat-desc">診断結果からそのまま宿泊予約サイトへ移動。一休.com・Yahoo!トラベルなど複数サイトで比較・予約できます。</p>
-        </div>
+      <div class="feat-icon-card">
+        <div class="feat-icon-wrap" style="background:#ECFDF5;">📋</div>
+        <span class="feat-tag">予約連携</span>
+        <h3 class="feat-title">楽天トラベル・じゃらんで宿泊プランを即検索</h3>
+        <p class="feat-desc">診断結果からそのまま宿泊予約サイトへ移動。一休.com・Yahoo!トラベルなど複数サイトで比較・予約できます。</p>
       </div>
     </div>
   </div>
@@ -339,7 +389,7 @@ details[open] .faq-arrow{transform:rotate(180deg);}
   <div class="sec-inner">
     <div style="text-align:center;margin-bottom:.5rem;"><span class="sec-label">旅タイプ別</span></div>
     <h2 class="sec-title">あなたはどのタイプ？</h2>
-    <p class="sec-sub">6つの旅スタイルから、あなたにぴったりのタイプを見つけよう</p>
+    <p class="sec-sub">12の旅スタイルから、あなたにぴったりのタイプを見つけよう</p>
     <div class="types-grid">
       <div class="type-card">
         <img src="../assets/photos/photo_07.jpg" alt="温泉リラックス">
@@ -370,6 +420,31 @@ details[open] .faq-arrow{transform:rotate(180deg);}
         <img src="../assets/photos/photo_12.jpg" alt="冬・スキー旅行">
         <div class="type-ov"></div>
         <div class="type-content"><span class="type-tag">⛷️ 冬・スキー</span><div class="type-name">ウィンタースポーツ派</div><div class="type-match">マッチ率 38%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_16.jpg" alt="一人旅">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">🌏 ソロ旅行</span><div class="type-name">一人旅・自由気まま</div><div class="type-match">マッチ率 60%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_02.jpg" alt="カップル旅行">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">💑 カップル</span><div class="type-name">ロマンチック記念日旅</div><div class="type-match">マッチ率 55%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_21.jpg" alt="家族旅行">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">👨‍👩‍👧‍👦 ファミリー</span><div class="type-name">子連れ家族旅行</div><div class="type-match">マッチ率 48%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_04.jpg" alt="高原・山岳旅行">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">🏔️ 高原・山岳</span><div class="type-name">トレッキング・絶景</div><div class="type-match">マッチ率 44%</div></div>
+      </div>
+      <div class="type-card">
+        <img src="../assets/photos/photo_05.jpg" alt="文化・パワースポット">
+        <div class="type-ov"></div>
+        <div class="type-content"><span class="type-tag">⛩️ 古都・神社</span><div class="type-name">文化歴史・パワースポット</div><div class="type-match">マッチ率 41%</div></div>
       </div>
     </div>
   </div>
